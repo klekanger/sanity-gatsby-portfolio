@@ -96,3 +96,7 @@
   composes: base from './typography.module.css';
   margin: 0.5rem 0 0;
 }
+
+.bodyText {
+  font-family: var(--font-family-txt);
+}

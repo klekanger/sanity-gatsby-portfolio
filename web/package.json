@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "sanity-gatsby-portfolio-web",
+  "name": "sanity-gatsby-portfolio",
   "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Kurt Lekanger <kurt@lekanger.no>",
   "scripts": {
     "build": "gatsby build",
     "clean-cache": "gatsby clean",

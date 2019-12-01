@@ -1,13 +1,23 @@
-:root {
-  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+/* palette from
+https://www.colourlovers.com/palette/4681998/Overtly_Laced_Boots
+#F3E5CB,#BCB599,#36362C,#665B3F,#779796,#F3E5CB,#BCB599,#36362C
+*/
+@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700|Lato:400,400i&display=swap');
 
-  --color-black: #202123;
-  --color-dark-gray: #32373e;
+:root {
+  /*
+  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  */
+  --font-family-sans: Lato, sans-serif;
+  --font-family-txt: Karla, sans-serif;
+
+  --color-black: #36362C;
+  --color-dark-gray: #665B3F;
   --color-gray: #697a90;
   --color-light-gray: #b4bcc7;
   --color-very-light-gray: #e7ebed;
-  --color-white: #fff;
-  --color-accent: #156dff;
+  --color-white: #BCB599;
+  --color-accent: #779796;
 
   /* Typography */
   --unit: 16;

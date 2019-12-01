@@ -1,27 +1,27 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
   filterOutDocsPublishedInTheFuture
-} from '../lib/helpers'
-import Container from '../components/container'
-import GraphQLErrorList from '../components/graphql-error-list'
-import ProjectPreviewGrid from '../components/project-preview-grid'
-import SEO from '../components/seo'
-import Layout from '../containers/layout'
+} from '../lib/helpers';
+import Container from '../components/container';
+import GraphQLErrorList from '../components/graphql-error-list';
+import ProjectPreviewGrid from '../components/project-preview-grid';
+import SEO from '../components/seo';
+import Layout from '../containers/layout';
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
     }
     projects: allSanityProject(
       limit: 6
-      sort: {fields: [publishedAt], order: DESC}
-      filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
       edges {
         node {
@@ -60,7 +60,7 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
-  const {data, errors} = props
+  const { data, errors } = props
 
   if (errors) {
     return (
@@ -87,7 +87,7 @@ const IndexPage = props => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
+        <h1>Velkommen til {site.title}</h1>
         {projectNodes && (
           <ProjectPreviewGrid
             title='Latest projects'
@@ -98,6 +98,6 @@ const IndexPage = props => {
       </Container>
     </Layout>
   )
-}
+};
 
 export default IndexPage

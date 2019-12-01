@@ -12,6 +12,7 @@
   position: relative;
   padding-bottom: 66.666%;
   background: #eee;
+  
 
   @nest & img {
     position: absolute;
@@ -23,6 +24,10 @@
   }
 }
 
+.previewImg {
+  border-radius: 5px;
+}
+
 .title {
   @media (hover: hover) {
     @nest .root:hover & {
@@ -32,6 +37,7 @@
 }
 
 .excerpt {
+  font-family: var(--font-family-txt);
   @nest & p {
     margin: 0.5em 0;
   }
