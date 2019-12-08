@@ -6,6 +6,7 @@
 }
 
 .headline {
+  font-family: var(--font-family-sans);
   font-size: var(--font-micro-size);
   line-height: var(--font-micro-line-height);
   font-weight: 600;
@@ -21,6 +22,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2em;
+
 
   @media (--media-min-small) {
     grid-template-columns: 1fr 1fr;
