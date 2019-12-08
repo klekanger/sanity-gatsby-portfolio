@@ -1,17 +1,16 @@
-import { format, distanceInWords, differenceInDays } from 'date-fns'
+import {format, distanceInWords, differenceInDays} from 'date-fns'
 import React from 'react'
-import { Link } from 'gatsby'
-import { buildImageObj } from '../lib/helpers'
-import { imageUrlFor } from '../lib/image-url'
+import {Link} from 'gatsby'
+import {buildImageObj} from '../lib/helpers'
+import {imageUrlFor} from '../lib/image-url'
 import BlockContent from './block-content'
 import Container from './container'
 import RoleList from './role-list'
-import BgImage from '../components/bgImage'
 
 import styles from './project.module.css'
 
-function Project(props) {
-  const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
+function Project (props) {
+  const {_rawBody, title, categories, mainImage, members, publishedAt, relatedProjects} = props
   return (
     <article className={styles.root}>
       {props.mainImage && mainImage.asset && (
@@ -39,7 +38,7 @@ function Project(props) {
               <div className={styles.publishedAt}>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
                   ? distanceInWords(new Date(publishedAt), new Date())
-                  : format(new Date(publishedAt), 'MMMM Do YYYY')}
+                  : format(new Date(publishedAt), 'D. MMMM YYYY').toLowerCase()}
               </div>
             )}
             {members && members.length > 0 && <RoleList items={members} title='Project members' />}
@@ -62,8 +61,8 @@ function Project(props) {
                       {project.slug ? (
                         <Link to={`/project/${project.slug.current}`}>{project.title}</Link>
                       ) : (
-                          <span>{project.title}</span>
-                        )}
+                        <span>{project.title}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
