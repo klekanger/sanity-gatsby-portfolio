@@ -12,19 +12,19 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Title'
+      title: 'Tittel'
     },
     {
       name: 'description',
       type: 'text',
-      title: 'Description',
-      description: 'Describe your portfolio for search engines and social media.'
+      title: 'Beskrivelse',
+      description: 'Beskriv nettsiden for søkemotorer og sosiale medier.'
     },
     {
       name: 'keywords',
       type: 'array',
-      title: 'Keywords',
-      description: 'Add keywords that describes your portfolio.',
+      title: 'Nøkkelord',
+      description: 'Nøkkelord som beskriver nettsiden.',
       of: [{type: 'string'}],
       options: {
         layout: 'tags'
@@ -33,8 +33,8 @@ export default {
     {
       name: 'author',
       type: 'reference',
-      description: 'Publish an author and set a reference to them here.',
-      title: 'Author',
+      description: 'Publiser en forfatter og legg inn en referanse til forfatteren her.',
+      title: 'Forfatter',
       to: [{type: 'person'}]
     }
   ]

@@ -9,13 +9,13 @@ export default {
     {
       name: 'name',
       type: 'string',
-      title: 'Name'
+      title: 'Navn'
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description: 'Some frontend will require a slug to be set to be able to show the person',
+      description: 'Legg inn en «slug».',
       options: {
         source: 'name',
         maxLength: 96
@@ -23,7 +23,7 @@ export default {
     },
     {
       name: 'image',
-      title: 'Image',
+      title: 'Bilde',
       type: 'figure'
     },
     {

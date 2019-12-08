@@ -7,7 +7,7 @@ export default {
   },
   fields: [
     {
-      title: 'Caption',
+      title: 'Bildetekst',
       name: 'caption',
       type: 'string',
       options: {
@@ -17,9 +17,9 @@ export default {
     {
       name: 'alt',
       type: 'string',
-      title: 'Alternative text',
+      title: 'Alternativ tekst',
       validation: Rule => Rule.error('You have to fill out the alternative text.').required(),
-      description: 'Important for SEO and accessiblity.',
+      description: 'Viktig for SEO and tilgjengelighet.',
       options: {
         isHighlighted: true
       }
