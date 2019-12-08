@@ -10,6 +10,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import IntroText from '../components/introtext'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -89,6 +90,7 @@ const IndexPage = props => {
       <Layout>
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
         <Container>
+          <IntroText />
           {projectNodes && (
             <ProjectPreviewGrid
               title='Siste prosjekter'
