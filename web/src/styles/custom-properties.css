@@ -11,13 +11,13 @@ https://www.colourlovers.com/palette/4681998/Overtly_Laced_Boots
   --font-family-sans: Lato, sans-serif;
   --font-family-txt: Karla, sans-serif;
 
-  --color-black: #36362C;
-  --color-dark-gray: #665B3F;
+  --color-black: #ccc;
+  --color-dark-gray: #fff;
   --color-gray: #697a90;
-  --color-light-gray: #b4bcc7;
+  --color-light-gray: #000;
   --color-very-light-gray: #e7ebed;
-  --color-white: #BCB599;
-  --color-accent: #779796;
+  --color-white: #fff;
+  --color-accent: #fff;
 
   /* Typography */
   --unit: 16;

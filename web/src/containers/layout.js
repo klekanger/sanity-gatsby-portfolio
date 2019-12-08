@@ -1,6 +1,7 @@
 import {graphql, StaticQuery} from 'gatsby'
 import React, {useState} from 'react'
 import Layout from '../components/layout'
+import BgImage from '../components/bgImage'
 
 const query = graphql`
   query SiteTitleQuery {
@@ -28,13 +29,15 @@ function LayoutContainer (props) {
           )
         }
         return (
-          <Layout
-            {...props}
-            showNav={showNav}
-            siteTitle={data.site.title}
-            onHideNav={handleHideNav}
-            onShowNav={handleShowNav}
-          />
+          <BgImage>
+            <Layout
+              {...props}
+              showNav={showNav}
+              siteTitle={data.site.title}
+              onHideNav={handleHideNav}
+              onShowNav={handleShowNav}
+            />
+          </BgImage>
         )
       }}
     />
