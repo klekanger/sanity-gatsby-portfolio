@@ -10,7 +10,7 @@ import {responsiveTitle3} from './typography.module.css'
 function ProjectPreview (props) {
   return (
     <Link className={styles.root} to={`/project/${props.slug.current}`}>
-      <div className={styles.leadMediaThumb}>
+      <div className={styles.leadMediaThumb}>x
         {props.mainImage && props.mainImage.asset && (
           <img className={styles.previewImg}
             src={imageUrlFor(buildImageObj(props.mainImage))

@@ -54,6 +54,15 @@ export const query = graphql`
           slug {
             current
           }
+          categories {
+            internal {
+              content
+              description
+              ignoreType
+              mediaType
+            }
+            title
+          }
         }
       }
     }
@@ -90,7 +99,7 @@ const IndexPage = props => {
       <Layout>
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
         <Container>
-          <IntroText />
+          <IntroText txt={site.description} />
           {projectNodes && (
             <ProjectPreviewGrid
               title='Siste prosjekter'

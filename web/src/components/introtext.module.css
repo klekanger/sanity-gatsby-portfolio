@@ -1,5 +1,9 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+
 .introtext {
+    font-family: var(--font-family-txt);
     font-size: 0.9em;
-    background-color: rgba(0, 0, 0, 0.6) ;
+    background-color: rgba(0, 0, 0, 0.4) ;
     box-shadow: 4px 6px 4px 2px rgba(0, 0, 0, 0.2);
 }
