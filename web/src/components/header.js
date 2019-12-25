@@ -10,6 +10,7 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
     <div className={styles.wrapper}>
       <div className={styles.branding}>
         <Link to='/'><span className={styles.logoColor1}>{'{'} kurt_</span><span className={styles.logoColor2}>lekanger {'}'}</span></Link>
+        <div className={styles.navMenu}><a href='https://linkedin.com/in/lekanger'>Gå til min LinkedIn-profil »</a></div>
       </div>
 
       {/*  --- commented out the nav/hamburger menu

@@ -33,17 +33,30 @@
   
   @nest & a {
     display: inline-block;
-    padding: 0.5em;
+    padding: 0.2em 0 0 0.5em;
     color: inherit;
     text-decoration: none;
 
     @media (hover: hover) {
       @nest &:hover {
-        color: var(--color-accent);
+        color: var(--color-logo2);
       }
     }
   }
+  @media (--media-max-small) {
+    font-size: 1.5em;
+  }
 }
+
+
+.navMenu {
+  font-weight: 400;
+  font-size: 0.4em;
+  padding: 0 0 0 3em;
+  color: var(--color-logo1);
+}
+
+
 
 .toggleNavButton {
   appearance: none;
@@ -67,7 +80,6 @@
 
 .nav {
   display: none;
-  line-height: 95px;
 
   @nest & ul {
     margin: 0;
