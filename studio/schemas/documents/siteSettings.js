@@ -16,7 +16,7 @@ export default {
     },
     {
       name: 'description',
-      type: 'string',
+      type: 'text',
       title: 'Beskrivelse',
       description: 'Beskriv nettsiden for søkemotorer og sosiale medier.'
     },

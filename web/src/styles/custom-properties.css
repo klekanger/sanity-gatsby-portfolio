@@ -1,16 +1,26 @@
 /* palette from
 https://www.colourlovers.com/palette/4681998/Overtly_Laced_Boots
 #F3E5CB,#BCB599,#36362C,#665B3F,#779796,#F3E5CB,#BCB599,#36362C
-*/
+
 @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700|Lato:400,400i&display=swap');
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i|Josefin+Sans&display=swap');
 
 :root {
   /*
   --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
-  */
   --font-family-sans: Lato, sans-serif;
   --font-family-txt: Karla, sans-serif;
+  
+  */
 
+  --font-family-sans: 'Josefin Sans', sans-serif;
+  --font-family-txt:  'Lato', sans-serif;
+  
+  
+  
   --color-black: #ccc;
   --color-dark-gray: #fff;
   --color-gray: #697a90;
@@ -18,6 +28,8 @@ https://www.colourlovers.com/palette/4681998/Overtly_Laced_Boots
   --color-very-light-gray: #e7ebed;
   --color-white: #fff;
   --color-accent: #fff;
+  --color-logo1: #D166D1;
+  --color-logo2:#00A9ED;
 
   /* Typography */
   --unit: 16;

@@ -1,17 +1,18 @@
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import Icon from './icon'
-import {cn} from '../lib/helpers'
+import { cn } from '../lib/helpers'
 
 import styles from './header.module.css'
 
-const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
+const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
-        <Link to='/'>{siteTitle}</Link>
+        <Link to='/'><span className={styles.logoColor1}>{'{'} kurt_</span><span className={styles.logoColor2}>lekanger {'}'}</span></Link>
       </div>
 
+      {/*  --- commented out the nav/hamburger menu
       <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
         <Icon symbol='hamburger' />
       </button>
@@ -23,8 +24,10 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
           </li>
         </ul>
       </nav>
+          */}
+
     </div>
-  </div>
+  </div >
 )
 
 export default Header

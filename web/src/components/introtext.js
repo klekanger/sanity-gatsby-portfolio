@@ -8,6 +8,7 @@ const IntroText = (props) => {
   return (
     <div className={styles.introtext}>
       <div dangerouslySetInnerHTML={{ __html: props.txt }} />
+
     </div>
   )
 }
