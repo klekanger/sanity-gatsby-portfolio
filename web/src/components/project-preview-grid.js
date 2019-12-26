@@ -1,10 +1,10 @@
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import ProjectPreview from './project-preview'
 
 import styles from './project-preview-grid.module.css'
 
-function ProjectPreviewGrid (props) {
+function ProjectPreviewGrid(props) {
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
@@ -18,7 +18,7 @@ function ProjectPreviewGrid (props) {
       </ul>
       {props.browseMoreHref && (
         <div className={styles.browseMoreNav}>
-          <Link to={props.browseMoreHref}>Flere artikler »</Link>
+          <Link to={props.browseMoreHref}>Gå til arkivet »</Link>
         </div>
       )}
     </div>
