@@ -33,6 +33,7 @@
   }
 }
 
+
 .browseMoreNav {
   composes: small from './typography.module.css';
   margin-top: 1rem;
