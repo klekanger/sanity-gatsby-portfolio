@@ -71,3 +71,4 @@ yarn.lock
 .env.development
 .env.production
 .env
+.env.development.template

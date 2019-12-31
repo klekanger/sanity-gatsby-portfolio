@@ -1,12 +1,12 @@
 import React from 'react'
-import {useStaticQuery, graphql} from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import styles from './bgImage.module.css'
 
-const BgImage = ({children}) => {
+const BgImage = ({ children }) => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: {eq: "background.jpg"}) {
+      file(relativePath: {eq: "background3.jpg"}) {
         childImageSharp {
           fluid(maxWidth:2000, quality: 100) {
             ...GatsbyImageSharpFluid
