@@ -1,4 +1,4 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns'
 
 export default {
   name: 'project',
@@ -27,6 +27,11 @@ export default {
       type: 'datetime'
     },
     {
+      name: 'pinned',
+      title: 'Pinned',
+      type: 'boolean'
+    },
+    {
       name: 'excerpt',
       title: 'Kort oppsummering',
       type: 'simplePortableText'
@@ -35,7 +40,7 @@ export default {
       name: 'members',
       title: 'Forfatter',
       type: 'array',
-      of: [{type: 'projectMember'}]
+      of: [{ type: 'projectMember' }]
     },
     {
       name: 'mainImage',
@@ -46,7 +51,7 @@ export default {
       name: 'categories',
       title: 'Kategorier',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      of: [{ type: 'reference', to: { type: 'category' } }]
     },
     {
       name: 'body',
@@ -57,7 +62,7 @@ export default {
       name: 'relatedProjects',
       title: 'Relaterte artikler',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'project'}}]
+      of: [{ type: 'reference', to: { type: 'project' } }]
     }
   ],
   preview: {
@@ -67,7 +72,7 @@ export default {
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'Ingen tittel', publishedAt, slug = {}, media}) {
+    prepare({ title = 'Ingen tittel', publishedAt, slug = {}, media }) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {
