@@ -1,0 +1,13 @@
+@import '../styles/custom-properties.css';
+
+.infotxt {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    line-height: 0.6em;
+    margin-bottom: 3em;
+}
+
+.icn {
+    color: var(--color-logo2);
+}
