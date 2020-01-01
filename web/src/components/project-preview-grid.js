@@ -6,7 +6,6 @@ import styles from './project-preview-grid.module.css'
 
 function ProjectPreviewGrid(props) {
   // Re-arrange articles, with pinned articles first
-
   const pinnedNodes = props.nodes.filter(node => node.pinned)
   const unPinnedNodes = props.nodes.filter(node => !node.pinned)
 
