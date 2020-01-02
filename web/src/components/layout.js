@@ -4,6 +4,9 @@ import ContactInfo from './contact-info'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 
 const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
