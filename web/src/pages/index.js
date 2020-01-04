@@ -96,7 +96,6 @@ const IndexPage = props => {
 
   return (
     <>
-
       <Layout>
         <SEO title={site.title} description={site.description} keywords={site.keywords} />
         <Container>
@@ -110,7 +109,6 @@ const IndexPage = props => {
           )}
         </Container>
       </Layout>
-
     </>
   )
 }
