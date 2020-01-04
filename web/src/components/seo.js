@@ -1,9 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import {StaticQuery, graphql} from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import favicon32 from '../images/favicon-32.png'
+import favicon128 from '../images/favicon-128.png'
+import favicon152 from '../images/favicon-152.png'
+import favicon167 from '../images/favicon-167.png'
+import favicon180 from '../images/favicon-180.png'
+import favicon192 from '../images/favicon-192.png'
+import favicon196 from '../images/favicon-196.png'
 
-function SEO ({description, lang, meta, keywords, title}) {
+function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -13,7 +20,7 @@ function SEO ({description, lang, meta, keywords, title}) {
         const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
         return (
           <Helmet
-            htmlAttributes={{lang}}
+            htmlAttributes={{ lang }}
             title={title}
             titleTemplate={title === siteTitle ? '%s' : `%s | ${siteTitle}`}
             meta={[
@@ -59,7 +66,15 @@ function SEO ({description, lang, meta, keywords, title}) {
                   : []
               )
               .concat(meta)}
-          />
+          >
+            <link rel="icon" href={favicon32} />
+            <link rel="icon" href={favicon128} />
+            <link rel="icon" href={favicon152} />
+            <link rel="icon" href={favicon167} />
+            <link rel="icon" href={favicon180} />
+            <link rel="icon" href={favicon192} />
+            <link rel="icon" href={favicon196} />
+          </Helmet>
         )
       }}
     />
