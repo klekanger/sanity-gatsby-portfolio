@@ -10,8 +10,9 @@
     margin-left: -18px;
 
     @media(--media-max-small) {
-        padding: 0 0 0 0;
-        margin-left: 0;
+        margin: 10px -18px 10px -18px;
+        box-shadow: none;
+        padding-right: 18px;
     }
 
 }
