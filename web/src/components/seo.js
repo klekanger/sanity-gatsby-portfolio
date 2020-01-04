@@ -69,11 +69,11 @@ function SEO({ description, lang, meta, keywords, title }) {
           >
             <link rel="icon" href={favicon32} />
             <link rel="icon" href={favicon128} />
-            <link rel="icon" href={favicon152} />
+            <link rel="apple-touch-icon" href={favicon152} />
             <link rel="icon" href={favicon167} />
-            <link rel="icon" href={favicon180} />
+            <link rel="apple-touch-icon" href={favicon180} />
             <link rel="icon" href={favicon192} />
-            <link rel="icon" href={favicon196} />
+            <link rel="shortcut icon" href={favicon196} />
           </Helmet>
         )
       }}
