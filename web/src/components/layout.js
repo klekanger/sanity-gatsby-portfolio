@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './header'
 import ContactInfo from './contact-info'
 // import CookieConsent from './cookie-consent'
-import GoogleAnalytics from './google-analytics'
+// import GoogleAnalytics from './google-analytics'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
@@ -12,7 +12,6 @@ config.autoAddCss = false;
 
 const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
-    <GoogleAnalytics />
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
