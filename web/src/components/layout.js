@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from './header'
 import ContactInfo from './contact-info'
-// import CookieConsent from './cookie-consent'
-// import GoogleAnalytics from './google-analytics'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
