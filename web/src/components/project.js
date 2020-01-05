@@ -41,7 +41,7 @@ function Project(props) {
                   : format(new Date(publishedAt), 'DD.MM.YYYY').toLowerCase()}
               </div>
             )}
-            {members && members.length > 0 && <RoleList items={members} title='Project members' />}
+            {members && members.length > 0 && <RoleList items={members} title='Forfatter' />}
             {categories && categories.length > 0 && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Emner</h3>
