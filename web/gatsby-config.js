@@ -13,14 +13,14 @@ module.exports = {
     siteUrl: `https://www.lekanger.no`
   },
   plugins: [
-    {
+    /*     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-6852843-1',
         head: true,
         anonymize: true
       }
-    },
+    }, */
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
