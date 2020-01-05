@@ -1,3 +1,6 @@
+// Integrate GDPR cookie consent
+// Using the free version of Cookiehub (https://www.cookiehub.com/)
+
 import React from 'react'
 
 const CookieConsent = () => {
