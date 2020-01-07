@@ -5,6 +5,7 @@ import { imageUrlFor } from '../lib/image-url'
 import BlockText from './block-text'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
+import posed from 'react-pose';
 
 import styles from './project-preview.module.css'
 import { responsiveTitle3 } from './typography.module.css'
@@ -16,9 +17,27 @@ function ProjectPreview(props) {
     </>
   )
     : null
+
+  const ImgBox = posed.div({
+    hoverable: true,
+    pressable: true,
+    init: {
+      scale: 1,
+      boxShadow: '0px 0px 0px rgba(0,0,0,0)'
+    },
+    hover: {
+      scale: 1.1,
+      boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
+    },
+    press: {
+      scale: 1.1,
+      boxShadow: '0px 2px 5px rgba(0,0,0,0.1)'
+    }
+  });
+
   return (
     <Link className={styles.root} to={`/project/${props.slug.current}`}>
-      <div className={styles.leadMediaThumb}>
+      <ImgBox className={styles.leadMediaThumb}>
         {props.mainImage && props.mainImage.asset && (
           <img className={styles.previewImg}
             src={imageUrlFor(buildImageObj(props.mainImage))
@@ -28,7 +47,7 @@ function ProjectPreview(props) {
             alt={props.mainImage.alt}
           />
         )}
-      </div>
+      </ImgBox>
       <h3 className={cn(responsiveTitle3, styles.title)}>
         {showPinIcon}
         {props.title}
