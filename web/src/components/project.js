@@ -70,7 +70,6 @@ function Project(props) {
             )}
           </aside>
         </div>
-        <br />
         <Link className={styles.hplink} to="/">Gå til forsiden</Link>
       </Container>
 
