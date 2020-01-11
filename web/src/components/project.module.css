@@ -48,6 +48,10 @@
 .metaContent {
 }
 
+.hplink {
+  color: var(--color-logo1);
+}
+
 .publishedAt {
   composes: small from './typography.module.css';
   margin: 1.5rem 0 3rem;
