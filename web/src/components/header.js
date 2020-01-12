@@ -1,13 +1,9 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import Icon from './icon'
-import { cn } from '../lib/helpers'
-import { motion } from "framer-motion"
-
+import { motion } from 'framer-motion'
 import styles from './header.module.css'
 
-
-const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
+const Header = () => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
@@ -22,10 +18,10 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
         >
           <Link to='/'><span className={styles.logoColor1}>{'{'} kurt_</span><span className={styles.logoColor2}>lekanger {'}'}</span></Link>
         </motion.div>
-        <div className={styles.navMenu}><a href='https://linkedin.com/in/lekanger'>LinkedIn</a> –<a href='https://github.com/klekanger'>Github</a></div>
+        <div className={styles.navMenu} ><a href='https://linkedin.com/in/lekanger'>LinkedIn</a> –<a href='https://github.com/klekanger'>Github</a></div>
       </div>
     </div>
-  </div >
+  </div>
 )
 
 export default Header
