@@ -72,3 +72,4 @@ yarn.lock
 .env.production
 .env
 .env.development.template
+client-config.js
