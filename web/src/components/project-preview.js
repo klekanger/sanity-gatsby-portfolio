@@ -18,8 +18,6 @@ function ProjectPreview(props) {
   )
     : null
 
-
-
   return (
     <Link className={styles.root} to={`/project/${props.slug.current}`}>
       <motion.div
@@ -28,7 +26,8 @@ function ProjectPreview(props) {
           transition: { duration: 0.2 },
         }}
         whileTap={{ scale: 1.0 }}
-        className={styles.leadMediaThumb}>
+        className={styles.leadMediaThumb}
+      >
         {props.mainImage && props.mainImage.asset && (
           <img className={styles.previewImg}
             src={imageUrlFor(buildImageObj(props.mainImage))

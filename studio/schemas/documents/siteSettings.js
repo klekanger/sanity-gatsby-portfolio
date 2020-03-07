@@ -21,11 +21,16 @@ export default {
       description: 'Beskriv nettsiden for søkemotorer og sosiale medier.'
     },
     {
+      name: 'intro',
+      title: 'Introtekst',
+      type: 'projectPortableText'
+    },
+    {
       name: 'keywords',
       type: 'array',
       title: 'Nøkkelord',
       description: 'Nøkkelord som beskriver nettsiden.',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
       options: {
         layout: 'tags'
       }
@@ -35,7 +40,7 @@ export default {
       type: 'reference',
       description: 'Publiser en forfatter og legg inn en referanse til forfatteren her.',
       title: 'Forfatter',
-      to: [{type: 'person'}]
+      to: [{ type: 'person' }]
     }
   ]
 }
