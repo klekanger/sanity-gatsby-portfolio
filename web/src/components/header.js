@@ -2,26 +2,51 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { motion } from 'framer-motion'
 import styles from './header.module.css'
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Header = () => (
-  <div className={styles.root}>
-    <div className={styles.wrapper}>
-      <div className={styles.branding}>
-        <Link to='/'><span className={styles.logoColor1}>{'{'} kurt_</span><span className={styles.logoColor2}>lekanger {'}'}</span></Link>
-        <motion.div
-          initial={{ y: -150, opacity: 0.5 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 250,
-            damping: 20
-          }}
-        >
-          <div className={styles.navMenu} ><a href='https://linkedin.com/in/lekanger'>LinkedIn</a> –<a href='https://github.com/klekanger'>Github</a></div>
-        </motion.div>
+
+
+const Header = () => {
+
+  // Get portrait image 
+  const data = useStaticQuery(graphql`
+  query  {
+    portraitImage: file(relativePath: {eq: "kurt-lekanger-transparent.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }  
+  `)
+
+  return (
+    < div className={styles.root} >
+      <div className={styles.wrapper}>
+        <div className={styles.branding}>
+          <Link className={styles.logo} to='/'>
+            <span className={styles.logoColor1}>{'{'} kurt_</span><span className={styles.logoColor2}>lekanger {'}'}</span>
+          </Link>
+
+          <motion.div
+            className={styles.portraitContainer}
+            initial={{ y: -150, opacity: 0.5 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 250,
+              damping: 20
+            }}>
+            <Img className={styles.portrait} fluid={data.portraitImage.childImageSharp.fluid} />
+            <div className={styles.navMenu} ><a href='https://linkedin.com/in/lekanger'>LinkedIn</a> –<a href='https://github.com/klekanger'>Github</a></div>
+          </motion.div>
+
+        </div>
       </div>
-    </div>
-  </div>
-)
+    </div >
+  )
+}
 
 export default Header
