@@ -7,6 +7,7 @@ const Header = () => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
+        <Link to='/'><span className={styles.logoColor1}>{'{'} kurt_</span><span className={styles.logoColor2}>lekanger {'}'}</span></Link>
         <motion.div
           initial={{ y: -150, opacity: 0.5 }}
           animate={{ y: 0, opacity: 1 }}
@@ -16,9 +17,8 @@ const Header = () => (
             damping: 20
           }}
         >
-          <Link to='/'><span className={styles.logoColor1}>{'{'} kurt_</span><span className={styles.logoColor2}>lekanger {'}'}</span></Link>
+          <div className={styles.navMenu} ><a href='https://linkedin.com/in/lekanger'>LinkedIn</a> –<a href='https://github.com/klekanger'>Github</a></div>
         </motion.div>
-        <div className={styles.navMenu} ><a href='https://linkedin.com/in/lekanger'>LinkedIn</a> –<a href='https://github.com/klekanger'>Github</a></div>
       </div>
     </div>
   </div>
