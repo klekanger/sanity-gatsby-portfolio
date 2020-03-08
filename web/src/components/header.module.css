@@ -56,7 +56,7 @@
     }
   }
   @media (--media-max-small) {
-    font-size: 2.2em;
+    font-size: 2.1em;
   }
 }
 
@@ -155,4 +155,3 @@
 .showNav {
   display: block;
 }
-
