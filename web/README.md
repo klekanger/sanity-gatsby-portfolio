@@ -6,4 +6,4 @@ Nettsiden er basert på Gatsby og React, med Sanity.io som headless CMS-løsning
 
 Basert på standardmalen fra Sanity.io ([https://www.sanity.io/create?template=sanity-io%2Fsanity-template-gatsby-portfolio])
 
-Jeg har gjort en del tilpasninger for å sette mitt personlige preg på sidene. 
+Jeg har gjort en del tilpasninger for å sette mitt personlige preg på sidene.  
