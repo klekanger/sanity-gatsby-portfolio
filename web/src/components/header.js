@@ -32,11 +32,11 @@ const Header = () => {
 
           <motion.div
             className={styles.portraitContainer}
-            initial={{ y: -150, opacity: 0.5 }}
+            initial={{ y: -250, opacity: 0.5 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
               type: "spring",
-              stiffness: 250,
+              stiffness: 150,
               damping: 20
             }}>
             <Img className={styles.portrait} fluid={data.portraitImage.childImageSharp.fluid} />
