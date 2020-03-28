@@ -39,7 +39,9 @@ const Header = () => {
               stiffness: 150,
               damping: 20
             }}>
-            <Img className={styles.portrait} fluid={data.portraitImage.childImageSharp.fluid} />
+            <Link className={styles.portrait} to='/'>
+              <Img fluid={data.portraitImage.childImageSharp.fluid} />
+            </Link>
             <div className={styles.navMenu} ><a href='https://linkedin.com/in/lekanger'>LinkedIn</a> –<a href='https://github.com/klekanger'>Github</a></div>
           </motion.div>
 
