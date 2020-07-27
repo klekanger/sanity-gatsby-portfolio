@@ -1,11 +1,19 @@
-import React from "react";
-import Figure from "./figure";
+/* eslint-disable comma-dangle */
+/* eslint-disable semi */
+import React from 'react';
+import Figure from './figure';
 
 const serializers = {
   types: {
     figure: Figure,
     code: (props) => (
-      <div style={{ backgroundColor: "#333", padding: "10px", width: "85vw", overflowX: "scroll" }}>
+      <div
+        style={{
+          backgroundColor: '#333',
+          padding: '10px',
+          overflowX: 'scroll',
+        }}
+      >
         <pre data-language={props.node.language}>
           <code>{props.node.code}</code>
         </pre>
