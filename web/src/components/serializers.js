@@ -1,24 +1,10 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable semi */
-import React from 'react';
 import Figure from './figure';
+import CodeBlock from './code-block';
 
 const serializers = {
   types: {
     figure: Figure,
-    code: (props) => (
-      <div
-        style={{
-          backgroundColor: '#333',
-          padding: '10px',
-          overflowX: 'scroll',
-        }}
-      >
-        <pre data-language={props.node.language}>
-          <code>{props.node.code}</code>
-        </pre>
-      </div>
-    ),
+    code: CodeBlock,
   },
 };
 

@@ -34,7 +34,8 @@
     "gatsby-transformer-sharp": "^2.5.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-syntax-highlighter": "^13.0.0"
   },
   "devDependencies": {
     "dotenv": "^8.0.0",
