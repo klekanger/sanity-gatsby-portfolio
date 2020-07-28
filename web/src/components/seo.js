@@ -1,25 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
-import favicon32 from '../images/favicon-32.png';
-import favicon128 from '../images/favicon-128.png';
-import favicon152 from '../images/favicon-152.png';
-import favicon167 from '../images/favicon-167.png';
-import favicon180 from '../images/favicon-180.png';
-import favicon192 from '../images/favicon-192.png';
-import favicon196 from '../images/favicon-196.png';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
+import favicon32 from '../images/favicon-32.png'
+import favicon128 from '../images/favicon-128.png'
+import favicon152 from '../images/favicon-152.png'
+import favicon167 from '../images/favicon-167.png'
+import favicon180 from '../images/favicon-180.png'
+import favicon192 from '../images/favicon-192.png'
+import favicon196 from '../images/favicon-196.png'
 
 function SEO({ description, lang, meta, keywords, title, image }) {
-  console.log('[seo.js] image : ' + JSON.stringify(image));
-
   return (
     <StaticQuery
       query={detailsQuery}
       render={(data) => {
-        const metaDescription = description || (data.site && data.site.description) || '';
-        const siteTitle = (data.site && data.site.title) || '';
-        const siteAuthor = (data.site && data.site.author && data.site.author.name) || '';
+        const metaDescription = description || (data.site && data.site.description) || ''
+        const siteTitle = (data.site && data.site.title) || ''
+        const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
         return (
           <Helmet
             htmlAttributes={{ lang }}
@@ -81,17 +79,17 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             <link rel="icon" href={favicon192} />
             <link rel="shortcut icon" href={favicon196} />
           </Helmet>
-        );
+        )
       }}
     />
-  );
+  )
 }
 
 SEO.defaultProps = {
   lang: 'en',
   meta: [],
   keywords: [],
-};
+}
 
 SEO.propTypes = {
   description: PropTypes.string,
@@ -99,9 +97,9 @@ SEO.propTypes = {
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
-};
+}
 
-export default SEO;
+export default SEO
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -114,4 +112,4 @@ const detailsQuery = graphql`
       }
     }
   }
-`;
+`
