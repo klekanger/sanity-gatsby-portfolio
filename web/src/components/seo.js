@@ -10,7 +10,7 @@ import favicon180 from '../images/favicon-180.png'
 import favicon192 from '../images/favicon-192.png'
 import favicon196 from '../images/favicon-196.png'
 
-function SEO({ description, lang, meta, keywords, title, image }) {
+function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -39,10 +39,6 @@ function SEO({ description, lang, meta, keywords, title, image }) {
               {
                 property: 'og:type',
                 content: 'website',
-              },
-              {
-                property: 'og:image',
-                content: image,
               },
               {
                 name: 'twitter:card',

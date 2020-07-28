@@ -9,6 +9,12 @@ const token = process.env.SANITY_READ_TOKEN
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
+  siteMetadata: {
+    title: `Kurt Lekanger`,
+    description: `Dette er Kurt Lekangers personlige nettside.`,
+    author: `Kurt Lekanger`,
+    siteUrl: `https://www.lekanger.no`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,

@@ -96,17 +96,10 @@ const IndexPage = (props) => {
     )
   }
 
-  const siteImageURL = '/images/kurt-lekanger-portfolio.jpg'
-
   return (
     <>
       <Layout>
-        <SEO
-          title={site.title}
-          description={site.description}
-          keywords={site.keywords}
-          image={siteImageURL}
-        />
+        <SEO title={site.title} description={site.description} keywords={site.keywords} />
         <Container>
           <IntroText txt={site._rawIntro} />
           {projectNodes && (

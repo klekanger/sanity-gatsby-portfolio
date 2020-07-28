@@ -3,7 +3,6 @@ import styles from './introtext.module.css'
 import BlockContent from './block-content'
 
 const IntroText = (props) => {
-  console.log(props)
   return (
     <div className={styles.introtext}>
       <BlockContent blocks={props.txt || []} />
