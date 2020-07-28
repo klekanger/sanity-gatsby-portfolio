@@ -13,8 +13,8 @@ export const query = graphql`
   query ArchivePageQuery {
     projects: allSanityProject(
       limit: 12
-      sort: {fields: [publishedAt], order: DESC}
-      filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
       edges {
         node {
@@ -36,7 +36,7 @@ export const query = graphql`
   }
 `
 
-const ArchivePage = props => {
+const ArchivePage = (props) => {
   const { data, errors } = props
   if (errors) {
     return (
@@ -49,7 +49,7 @@ const ArchivePage = props => {
     data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
   return (
     <Layout>
-      <SEO title='Arkiv' />
+      <SEO title="Arkiv" />
       <Container>
         <h1 className={responsiveTitle1}>Prosjekter</h1>
         {projectNodes && projectNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />}

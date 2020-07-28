@@ -1,23 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import favicon32 from '../images/favicon-32.png'
-import favicon128 from '../images/favicon-128.png'
-import favicon152 from '../images/favicon-152.png'
-import favicon167 from '../images/favicon-167.png'
-import favicon180 from '../images/favicon-180.png'
-import favicon192 from '../images/favicon-192.png'
-import favicon196 from '../images/favicon-196.png'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import favicon32 from '../images/favicon-32.png';
+import favicon128 from '../images/favicon-128.png';
+import favicon152 from '../images/favicon-152.png';
+import favicon167 from '../images/favicon-167.png';
+import favicon180 from '../images/favicon-180.png';
+import favicon192 from '../images/favicon-192.png';
+import favicon196 from '../images/favicon-196.png';
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
+  console.log('[seo.js] image : ' + JSON.stringify(image));
+
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
-        const metaDescription = description || (data.site && data.site.description) || ''
-        const siteTitle = (data.site && data.site.title) || ''
-        const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
+      render={(data) => {
+        const metaDescription = description || (data.site && data.site.description) || '';
+        const siteTitle = (data.site && data.site.title) || '';
+        const siteAuthor = (data.site && data.site.author && data.site.author.name) || '';
         return (
           <Helmet
             htmlAttributes={{ lang }}
@@ -26,43 +28,47 @@ function SEO({ description, lang, meta, keywords, title }) {
             meta={[
               {
                 name: 'description',
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: 'og:title',
-                content: title
+                content: title,
               },
               {
                 property: 'og:description',
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: 'og:type',
-                content: 'website'
+                content: 'website',
+              },
+              {
+                property: 'og:image',
+                content: image,
               },
               {
                 name: 'twitter:card',
-                content: 'summary'
+                content: 'summary',
               },
               {
                 name: 'twitter:creator',
-                content: siteAuthor
+                content: siteAuthor,
               },
               {
                 name: 'twitter:title',
-                content: title
+                content: title,
               },
               {
                 name: 'twitter:description',
-                content: metaDescription
-              }
+                content: metaDescription,
+              },
             ]
               .concat(
                 keywords && keywords.length > 0
                   ? {
-                    name: 'keywords',
-                    content: keywords.join(', ')
-                  }
+                      name: 'keywords',
+                      content: keywords.join(', '),
+                    }
                   : []
               )
               .concat(meta)}
@@ -75,31 +81,31 @@ function SEO({ description, lang, meta, keywords, title }) {
             <link rel="icon" href={favicon192} />
             <link rel="shortcut icon" href={favicon196} />
           </Helmet>
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: 'en',
   meta: [],
-  keywords: []
-}
+  keywords: [],
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
-}
+  title: PropTypes.string.isRequired,
+};
 
-export default SEO
+export default SEO;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
+    site: sanitySiteSettings(_id: { eq: "siteSettings" }) {
       title
       description
       keywords
@@ -108,4 +114,4 @@ const detailsQuery = graphql`
       }
     }
   }
-`
+`;

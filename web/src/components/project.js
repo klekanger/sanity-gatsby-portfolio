@@ -11,6 +11,7 @@ import styles from './project.module.css'
 
 function Project(props) {
   const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
+
   return (
     <article className={styles.root}>
       {props.mainImage && mainImage.asset && (
@@ -41,12 +42,12 @@ function Project(props) {
                   : format(new Date(publishedAt), 'DD.MM.YYYY').toLowerCase()}
               </div>
             )}
-            {members && members.length > 0 && <RoleList items={members} title='Forfatter' />}
+            {members && members.length > 0 && <RoleList items={members} title="Forfatter" />}
             {categories && categories.length > 0 && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Emner</h3>
                 <ul>
-                  {categories.map(category => (
+                  {categories.map((category) => (
                     <li key={category._id}>{category.title}</li>
                   ))}
                 </ul>
@@ -56,13 +57,13 @@ function Project(props) {
               <div className={styles.relatedProjects}>
                 <h3 className={styles.relatedProjectsHeadline}>Relaterte artikler</h3>
                 <ul>
-                  {relatedProjects.map(project => (
+                  {relatedProjects.map((project) => (
                     <li key={`related_${project._id}`}>
                       {project.slug ? (
                         <Link to={`/project/${project.slug.current}`}>{project.title}</Link>
                       ) : (
-                          <span>{project.title}</span>
-                        )}
+                        <span>{project.title}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -70,9 +71,10 @@ function Project(props) {
             )}
           </aside>
         </div>
-        <Link className={styles.hplink} to="/">Gå til forsiden</Link>
+        <Link className={styles.hplink} to="/">
+          Gå til forsiden
+        </Link>
       </Container>
-
     </article>
   )
 }

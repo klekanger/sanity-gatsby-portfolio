@@ -36,7 +36,6 @@
   color: var(--color-logo1);
 }
 
-
 .branding {
   font-weight: 400;
   font-size: 2.5em;
@@ -44,7 +43,7 @@
   flex-direction: column;
   width: 100vw;
   align-items: flex-start;
-  
+
   @nest & a {
     display: inline-block;
     padding: 0.2em 0 0 0.5em;
@@ -64,7 +63,6 @@
   }
 }
 
-
 .logo {
   z-index: 2;
   margin-left: 100px;
@@ -82,8 +80,6 @@
   width: 75px;
   margin-bottom: 3px;
 }
-
-
 
 .toggleNavButton {
   appearance: none;

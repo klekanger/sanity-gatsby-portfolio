@@ -6,21 +6,21 @@ import styles from './project-preview-grid.module.css'
 
 function ProjectPreviewGrid(props) {
   // Re-arrange articles, with pinned articles first
-  const pinnedNodes = props.nodes.filter(node => node.pinned)
-  const unPinnedNodes = props.nodes.filter(node => !node.pinned)
+  const pinnedNodes = props.nodes.filter((node) => node.pinned)
+  const unPinnedNodes = props.nodes.filter((node) => !node.pinned)
 
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
       <ul className={styles.grid}>
         {pinnedNodes &&
-          pinnedNodes.map(node => (
+          pinnedNodes.map((node) => (
             <li key={node.id}>
               <ProjectPreview {...node} />
             </li>
           ))}
         {unPinnedNodes &&
-          unPinnedNodes.map(node => (
+          unPinnedNodes.map((node) => (
             <li key={node.id}>
               <ProjectPreview {...node} />
             </li>
@@ -38,7 +38,7 @@ function ProjectPreviewGrid(props) {
 ProjectPreviewGrid.defaultProps = {
   title: '',
   nodes: [],
-  browseMoreHref: ''
+  browseMoreHref: '',
 }
 
 export default ProjectPreviewGrid

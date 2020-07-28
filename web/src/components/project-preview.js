@@ -5,7 +5,7 @@ import { imageUrlFor } from '../lib/image-url'
 import BlockText from './block-text'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
 import styles from './project-preview.module.css'
 import { responsiveTitle3 } from './typography.module.css'
@@ -13,10 +13,9 @@ import { responsiveTitle3 } from './typography.module.css'
 function ProjectPreview(props) {
   const showPinIcon = props.pinned ? (
     <>
-      <FontAwesomeIcon icon={faExclamationCircle} /> <span>  </span>
+      <FontAwesomeIcon icon={faExclamationCircle} /> <span> </span>
     </>
-  )
-    : null
+  ) : null
 
   return (
     <Link className={styles.root} to={`/project/${props.slug.current}`}>
@@ -29,7 +28,8 @@ function ProjectPreview(props) {
         className={styles.leadMediaThumb}
       >
         {props.mainImage && props.mainImage.asset && (
-          <img className={styles.previewImg}
+          <img
+            className={styles.previewImg}
             src={imageUrlFor(buildImageObj(props.mainImage))
               .width(600)
               .height(Math.floor((9 / 16) * 600))

@@ -1,6 +1,6 @@
 // Load variables from `.env` as soon as possible
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV || 'development'}`
+  path: `.env.${process.env.NODE_ENV || 'development'}`,
 })
 
 const clientConfig = require('./client-config')
@@ -9,17 +9,14 @@ const token = process.env.SANITY_READ_TOKEN
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  siteMetadata: {
-    siteUrl: `https://www.lekanger.no`
-  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-6852843-2',
         head: true,
-        anonymize: true
-      }
+        anonymize: true,
+      },
     },
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-postcss',
@@ -30,24 +27,24 @@ module.exports = {
         ...clientConfig.sanity,
         token,
         watchMode: !isProd,
-        overlayDrafts: !isProd && token
-      }
+        overlayDrafts: !isProd && token,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages/`
-      }
+        path: `${__dirname}/src/pages/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`
-      }
+        path: `${__dirname}/src/images/`,
+      },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
-  ]
+    `gatsby-plugin-sharp`,
+  ],
 }

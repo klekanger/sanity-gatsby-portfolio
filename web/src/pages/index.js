@@ -1,9 +1,10 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from 'react'
 import { graphql } from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
+  filterOutDocsPublishedInTheFuture,
 } from '../lib/helpers'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -18,6 +19,7 @@ export const query = graphql`
       title
       description
       keywords
+      _rawIntro
     }
     projects: allSanityProject(
       limit: 6
@@ -70,7 +72,7 @@ export const query = graphql`
   }
 `
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   const { data, errors } = props
 
   if (errors) {
@@ -84,8 +86,8 @@ const IndexPage = props => {
   const site = (data || {}).site
   const projectNodes = (data || {}).projects
     ? mapEdgesToNodes(data.projects)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
     : []
 
   if (!site) {
@@ -94,17 +96,24 @@ const IndexPage = props => {
     )
   }
 
+  const siteImageURL = '/images/kurt-lekanger-portfolio.jpg'
+
   return (
     <>
       <Layout>
-        <SEO title={site.title} description={site.description} keywords={site.keywords} />
+        <SEO
+          title={site.title}
+          description={site.description}
+          keywords={site.keywords}
+          image={siteImageURL}
+        />
         <Container>
-          <IntroText txt={site.description} />
+          <IntroText txt={site._rawIntro} />
           {projectNodes && (
             <ProjectPreviewGrid
-              title='Siste prosjekter'
+              title="Siste prosjekter"
               nodes={projectNodes}
-              browseMoreHref='/archive/'
+              browseMoreHref="/archive/"
             />
           )}
         </Container>

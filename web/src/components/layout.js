@@ -4,9 +4,9 @@ import ContactInfo from './contact-info'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
-import { config } from "@fortawesome/fontawesome-svg-core";
+import { config } from '@fortawesome/fontawesome-svg-core'
 
-config.autoAddCss = false;
+config.autoAddCss = false
 
 const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
@@ -16,9 +16,10 @@ const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
       <div className={styles.footerWrapper}>
         <ContactInfo />
         <div className={styles.siteInfo}>
-          © Kurt Lekanger {new Date().getFullYear()}, Laget med <a href='https://www.sanity.io'>Sanity</a> &amp;
+          © Kurt Lekanger {new Date().getFullYear()}, Laget med{' '}
+          <a href="https://www.sanity.io">Sanity</a> &amp;
           {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </div>
       </div>
     </footer>
