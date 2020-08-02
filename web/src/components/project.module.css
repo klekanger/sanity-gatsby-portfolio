@@ -105,3 +105,8 @@
 .bodyText {
   font-family: var(--font-family-txt);
 }
+
+code {
+  background-color: var(--color-code-background);
+  color: var(--color-code-text);
+}
