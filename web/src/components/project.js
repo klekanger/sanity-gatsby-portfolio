@@ -28,12 +28,12 @@ function Project(props) {
       )}
       <Container>
         <div className={styles.grid}>
-          <div className={styles.mainContent}>
+          <article className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
             <span className={styles.bodyText}>
               {_rawBody && <BlockContent blocks={_rawBody || []} />}
             </span>
-          </div>
+          </article>
           <aside className={styles.metaContent}>
             {publishedAt && (
               <div className={styles.publishedAt}>
