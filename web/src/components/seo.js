@@ -10,7 +10,7 @@ import favicon180 from '../images/favicon-180.png'
 import favicon192 from '../images/favicon-192.png'
 import favicon196 from '../images/favicon-196.png'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -18,6 +18,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         const metaDescription = description || (data.site && data.site.description) || ''
         const siteTitle = (data.site && data.site.title) || ''
         const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
+
         return (
           <Helmet
             htmlAttributes={{ lang }}
@@ -39,6 +40,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 property: 'og:type',
                 content: 'website',
+              },
+              {
+                property: 'og:image',
+                content: image,
               },
               {
                 name: 'twitter:card',
