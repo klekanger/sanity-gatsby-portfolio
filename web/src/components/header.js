@@ -9,7 +9,7 @@ const Header = () => {
   // Get portrait image
   const data = useStaticQuery(graphql`
     query {
-      portraitImage: file(relativePath: { eq: "kurt-lekanger-transparent.png" }) {
+      portraitImage: file(relativePath: { eq: "kurt-lekanger-transparent.webp" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
