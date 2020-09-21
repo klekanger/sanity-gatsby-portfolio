@@ -87,12 +87,18 @@ export const query = graphql`
         roles
       }
     }
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
   }
 `
 
 const ProjectTemplate = (props) => {
   const { data, errors } = props
   const project = data && data.project
+  const siteUrl = data.site.siteMetadata.siteUrl
 
   const imgSrc = imageUrlFor(buildImageObj(project.mainImage))
     .width(1200)
@@ -112,7 +118,7 @@ const ProjectTemplate = (props) => {
           <GraphQLErrorList errors={errors} />
         </Container>
       )}
-      {project && <Project {...project} />}
+      {project && <Project {...project} url={siteUrl} />}
     </Layout>
   )
 }

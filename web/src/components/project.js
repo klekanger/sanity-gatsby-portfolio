@@ -24,7 +24,11 @@ function Project(props) {
 
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: slug.current, title },
+    config: {
+      url: `${props.url}/project/${slug.current}`,
+      identifier: slug.current,
+      title: title,
+    },
   }
 
   return (
