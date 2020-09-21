@@ -12,7 +12,7 @@ const Header = () => {
       portraitImage: file(relativePath: { eq: "kurt-lekanger-transparent.webp" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
