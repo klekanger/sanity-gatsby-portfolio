@@ -110,3 +110,7 @@ p > code {
   background-color: var(--color-code-background);
   color: var(--color-code-text);
 }
+
+.disqus {
+  padding-top: 1.5em;
+}

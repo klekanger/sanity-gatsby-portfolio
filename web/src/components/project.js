@@ -6,11 +6,26 @@ import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
 import Container from './container'
 import RoleList from './role-list'
+import { DiscussionEmbed } from 'disqus-react'
 
 import styles from './project.module.css'
 
 function Project(props) {
-  const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
+  const {
+    _rawBody,
+    title,
+    slug,
+    categories,
+    mainImage,
+    members,
+    publishedAt,
+    relatedProjects,
+  } = props
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug.current, title },
+  }
 
   return (
     <article className={styles.root}>
@@ -74,6 +89,8 @@ function Project(props) {
         <Link className={styles.hplink} to="/">
           Gå til forsiden
         </Link>
+
+        <DiscussionEmbed className={styles.disqus} {...disqusConfig} />
       </Container>
     </article>
   )
