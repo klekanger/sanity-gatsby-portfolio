@@ -58,7 +58,7 @@ function Project(props) {
               <div className={styles.publishedAt}>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
                   ? distanceInWords(new Date(publishedAt), new Date())
-                  : format(new Date(publishedAt), 'DD.MM.YYYY').toLowerCase()}
+                  : format(new Date(publishedAt), 'dd.MM.yyyy').toLowerCase()}
               </div>
             )}
             {members && members.length > 0 && <RoleList items={members} title="Forfatter" />}
