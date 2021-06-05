@@ -1,7 +1,7 @@
 // Contact info at the bottom of all pages
 
 import React from 'react'
-import styles from './contact-info.module.css'
+import * as styles from './contact-info.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'

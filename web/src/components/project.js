@@ -8,7 +8,7 @@ import Container from './container'
 import RoleList from './role-list'
 import { DiscussionEmbed } from 'disqus-react'
 
-import styles from './project.module.css'
+import * as styles from './project.module.css'
 
 function Project(props) {
   const {

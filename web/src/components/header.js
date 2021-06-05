@@ -1,19 +1,17 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { motion } from 'framer-motion'
-import styles from './header.module.css'
-import Img from 'gatsby-image'
+import * as styles from './header.module.css'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Header = () => {
   // Get portrait image
   const data = useStaticQuery(graphql`
-    query {
+    {
       portraitImage: file(relativePath: { eq: "kurt-lekanger-transparent.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(width: 300, layout: CONSTRAINED)
         }
       }
     }
@@ -39,7 +37,10 @@ const Header = () => {
             }}
           >
             <Link className={styles.portrait} to="/">
-              <Img fluid={data.portraitImage.childImageSharp.fluid} />
+              <GatsbyImage
+                image={data.portraitImage.childImageSharp.gatsbyImageData}
+                alt="Kurt Lekanger - portrett"
+              />
             </Link>
             <div className={styles.navMenu}>
               <a href="https://linkedin.com/in/lekanger">LinkedIn</a> –

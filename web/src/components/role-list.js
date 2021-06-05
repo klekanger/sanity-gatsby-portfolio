@@ -1,16 +1,16 @@
 import React from 'react'
-import {buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
-import {ucfirst} from '../lib/string-utils'
+import { buildImageObj } from '../lib/helpers'
+import { imageUrlFor } from '../lib/image-url'
+import { ucfirst } from '../lib/string-utils'
 
-import styles from './role-list.module.css'
+import * as styles from './role-list.module.css'
 
-function RoleList ({items, title}) {
+function RoleList({ items, title }) {
   return (
     <div className={styles.root}>
       <h2 className={styles.headline}>{title}</h2>
       <ul className={styles.list}>
-        {items.map(item => (
+        {items.map((item) => (
           <li key={item._key} className={styles.listItem}>
             <div>
               <div className={styles.avatar}>
@@ -21,7 +21,7 @@ function RoleList ({items, title}) {
                       .height(100)
                       .fit('crop')
                       .url()}
-                    alt=''
+                    alt=""
                   />
                 )}
               </div>

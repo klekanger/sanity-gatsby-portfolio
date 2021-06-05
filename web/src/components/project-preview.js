@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'
 
-import styles from './project-preview.module.css'
+import * as styles from './project-preview.module.css'
 import { responsiveTitle3 } from './typography.module.css'
 
 function ProjectPreview(props) {
