@@ -17,6 +17,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: '@sentry/gatsby',
+      options: {
+        dsn: 'https://726c63624cc14675ada692eade7cb188@o849093.ingest.sentry.io/5816155',
+        sampleRate: 0.7,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-6852843-2',
