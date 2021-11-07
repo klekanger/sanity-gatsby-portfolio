@@ -6,7 +6,7 @@ export default {
         templateRepoId: 'sanity-io/sanity-template-gatsby-portfolio'
       }
     },
-    {name: 'structure-menu'},
+    { name: 'structure-menu' },
     {
       name: 'project-info',
       options: {
@@ -21,7 +21,8 @@ export default {
                   buildHookId: '5d6820d18bb99f25b87387fd',
                   title: 'Sanity Studio',
                   name: 'sanity-gatsby-portfolio-studio-9wbwr6s7',
-                  apiId: '80059b49-6a21-4034-92f6-ff938e551841'
+                  apiId: '80059b49-6a21-4034-92f6-ff938e551841',
+                  url: 'https://lekanger.sanity.studio/'
                 },
                 {
                   buildHookId: '5d6820d11730215828876393',
@@ -47,11 +48,11 @@ export default {
         ]
       }
     },
-    {name: 'project-users', layout: {height: 'auto'}},
+    { name: 'project-users', layout: { height: 'auto' } },
     {
       name: 'document-list',
-      options: {title: 'Recent projects', order: '_createdAt desc', types: ['project']},
-      layout: {width: 'medium'}
+      options: { title: 'Recent projects', order: '_createdAt desc', types: ['project'] },
+      layout: { width: 'medium' }
     }
   ]
-}
+};
