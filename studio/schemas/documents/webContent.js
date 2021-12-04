@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 export default {
   name: 'webContent',
   title: 'Web-innhold',
@@ -13,6 +15,12 @@ export default {
       title: 'Hovedbilde',
       type: 'figure'
     },
+    {
+      name: 'publishedAt',
+      title: 'Publiseringstidspunkt',
+      description: 'Du kan bruke dette feltet til å forhåndspublisere artikler.',
+      type: 'datetime'
+    },
 
     {
       name: 'body',
@@ -25,5 +33,24 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: { type: 'webContentCategory' } }]
     }
-  ]
+  ],
+
+  preview: {
+    select: {
+      title: 'title',
+      publishedAt: 'publishedAt',
+      media: 'mainImage',
+      category: 'webContentCategories.0.title'
+    },
+    prepare({ title = 'Ingen tittel', publishedAt, media, category }) {
+      const dateSegment = format(publishedAt, 'DD.MM.YYYY');
+      const published = `Publisert: ${dateSegment} [${category}]`;
+
+      return {
+        title,
+        media,
+        subtitle: publishedAt ? published : `Manglende publiseringsdato [${category}]`
+      };
+    }
+  }
 };
