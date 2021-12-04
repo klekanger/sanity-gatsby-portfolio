@@ -1,12 +1,12 @@
 export default {
-  name: 'category',
+  name: 'webContentCategory',
   type: 'document',
-  title: 'Kategorier artikler',
+  title: 'Kategorier web-innhold',
   fields: [
     {
       name: 'title',
       type: 'string',
-      title: 'Tittel'
+      title: 'Kategori'
     },
     {
       name: 'description',

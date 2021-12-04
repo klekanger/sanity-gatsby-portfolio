@@ -18,6 +18,12 @@ export default {
       name: 'body',
       title: 'Brødtekst',
       type: 'projectPortableText'
+    },
+    {
+      name: 'webContentCategories',
+      title: 'Innholds-kategori',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'webContentCategory' } }]
     }
   ]
 };
