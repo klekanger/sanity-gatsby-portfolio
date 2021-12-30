@@ -28,10 +28,25 @@ export default {
       type: 'projectPortableText'
     },
     {
-      name: 'webContentCategories',
-      title: 'Innholds-kategori',
+      name: 'webContentTextBoxes',
+      title: 'Tekstbokser til web-innhold',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'webContentCategory' } }]
+      of: [{ type: 'reference', to: { type: 'webContentTextBox' } }]
+    },
+    {
+      name: 'webContentType',
+      title: 'Type web-innhold',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Tjeneste', value: 'service' },
+          { title: 'Kundereferanse', value: 'customer-reference' },
+          { title: 'Om meg', value: 'about-me' },
+          { title: 'Kontakt meg', value: 'contact-me' },
+          { title: 'Hero-seksjon', value: 'hero' }
+        ],
+        layout: 'radio'
+      }
     }
   ],
 

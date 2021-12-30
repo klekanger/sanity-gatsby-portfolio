@@ -11,6 +11,8 @@ import project from './documents/project';
 import webContent from './documents/webContent';
 import siteSettings from './documents/siteSettings';
 import webContentCategory from './documents/webContentCategory';
+import webContentTextBox from './documents/webContentTextBox';
+import webFrontpageContent from './documents/webFrontpageContent';
 
 // Object types
 import bioPortableText from './objects/bioPortableText';
@@ -38,10 +40,12 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     category,
-    webContentCategory,
     person,
+    webContentCategory,
     project,
     webContent,
+    webContentTextBox,
+    webFrontpageContent,
     siteSettings
   ])
 });
