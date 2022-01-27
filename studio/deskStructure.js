@@ -1,5 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder';
-import { MdArticle, MdCategory, MdHome, MdSettings, MdViewModule } from 'react-icons/md';
+import { MdSettings } from 'react-icons/md';
 
 const hiddenDocTypes = listItem =>
   ![
@@ -33,33 +33,27 @@ export default () =>
       S.listItem()
         .title('Artikler')
         .schemaType('project')
-        .child(S.documentTypeList('project').title('Artikler'))
-        .icon(MdArticle),
+        .child(S.documentTypeList('project').title('Artikler')),
       S.listItem()
         .title('Artikler - kategorier')
         .schemaType('category')
-        .child(S.documentTypeList('category').title('Artikler - kategorier'))
-        .icon(MdCategory),
+        .child(S.documentTypeList('category').title('Artikler - kategorier')),
       S.listItem()
         .title('Undersider på nettsiden')
         .schemaType('webContent')
-        .child(S.documentTypeList('webContent').title('Undersider - innhold'))
-        .icon(MdArticle),
+        .child(S.documentTypeList('webContent').title('Undersider - innhold')),
       S.listItem()
         .title('Undersider - kategorier')
         .schemaType('category')
-        .child(S.documentTypeList('webContentCategory').title('Undersider - kategorier'))
-        .icon(MdCategory),
+        .child(S.documentTypeList('webContentCategory').title('Undersider - kategorier')),
       S.listItem()
         .title('Undersider - tekstbokser til artiklene')
         .schemaType('webContentTextBox')
-        .child(S.documentTypeList('webContentTextBox').title('Undersider - tekstbokser '))
-        .icon(MdViewModule),
+        .child(S.documentTypeList('webContentTextBox').title('Undersider - tekstbokser ')),
       S.listItem()
         .title('Innhold til forsidemoduler')
         .schemaType('webFrontpageContent')
-        .child(S.documentTypeList('webFrontpageContent').title('Innhold til forsidemoduler'))
-        .icon(MdHome),
+        .child(S.documentTypeList('webFrontpageContent').title('Innhold til forsidemoduler')),
 
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have

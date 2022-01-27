@@ -1,7 +1,10 @@
+import { MdViewModule } from 'react-icons/md';
+
 export default {
   name: 'webContentTextBox',
   type: 'document',
-  title: 'Tekstboks til webinnhold',
+  title: 'Undersider - tekstbokser til artiklene',
+  icon: MdViewModule,
   fields: [
     {
       name: 'title',

@@ -1,7 +1,7 @@
 export default {
   name: 'siteSettings',
   type: 'document',
-  title: 'Site Settings',
+  title: 'Innstillinger',
   __experimental_actions: [
     // 'create',
     'update',
@@ -43,4 +43,4 @@ export default {
       to: [{ type: 'person' }]
     }
   ]
-}
+};

@@ -1,9 +1,10 @@
-import { format } from 'date-fns';
+import { MdHome } from 'react-icons/md';
 
 export default {
   name: 'webFrontpageContent',
-  title: 'Web-innhold til forsidemoduler',
+  title: 'Innhold til forsidemoduler',
   type: 'document',
+  icon: MdHome,
   fields: [
     {
       name: 'title',

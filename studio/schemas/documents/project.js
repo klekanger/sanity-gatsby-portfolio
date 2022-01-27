@@ -1,9 +1,11 @@
 import { format } from 'date-fns';
+import { MdArticle } from 'react-icons/md';
 
 export default {
   name: 'project',
-  title: 'Artikkel',
+  title: 'Artikler',
   type: 'document',
+  icon: MdArticle,
   fields: [
     {
       name: 'title',

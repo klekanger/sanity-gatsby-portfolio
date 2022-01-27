@@ -1,9 +1,11 @@
 import { format } from 'date-fns';
+import { MdArticle } from 'react-icons/md';
 
 export default {
   name: 'webContent',
-  title: 'Web-innhold',
+  title: 'Undersider på nettsiden',
   type: 'document',
+  icon: MdArticle,
   fields: [
     {
       name: 'title',

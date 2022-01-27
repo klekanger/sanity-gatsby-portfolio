@@ -1,7 +1,10 @@
+import { MdCategory } from 'react-icons/md';
+
 export default {
   name: 'category',
   type: 'document',
-  title: 'Kategorier artikler',
+  title: 'Artikler - kategorier',
+  icon: MdCategory,
   fields: [
     {
       name: 'title',
