@@ -8,7 +8,6 @@ const hiddenDocTypes = listItem =>
     'person',
     'project',
     'siteSettings',
-    'webContentCategory',
     'webFrontpageContent',
     'webContentTextBox'
   ].includes(listItem.getId());
@@ -42,10 +41,6 @@ export default () =>
         .title('Undersider på nettsiden')
         .schemaType('webContent')
         .child(S.documentTypeList('webContent').title('Undersider - innhold')),
-      S.listItem()
-        .title('Undersider - kategorier')
-        .schemaType('category')
-        .child(S.documentTypeList('webContentCategory').title('Undersider - kategorier')),
       S.listItem()
         .title('Undersider - tekstbokser til artiklene')
         .schemaType('webContentTextBox')

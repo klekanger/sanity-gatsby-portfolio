@@ -5,7 +5,6 @@ import person from './documents/person';
 import project from './documents/project';
 import siteSettings from './documents/siteSettings';
 import webContent from './documents/webContent';
-import webContentCategory from './documents/webContentCategory';
 import webContentTextBox from './documents/webContentTextBox';
 import webFrontpageContent from './documents/webFrontpageContent';
 import bioPortableText from './objects/bioPortableText';
@@ -33,7 +32,6 @@ export default createSchema({
     // in the studio.
     category,
     person,
-    webContentCategory,
     project,
     webContent,
     webContentTextBox,
