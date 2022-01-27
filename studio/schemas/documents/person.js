@@ -1,4 +1,4 @@
-import MdPerson from 'react-icons/lib/md/person'
+import { MdPerson } from 'react-icons/md';
 
 export default {
   name: 'person',
@@ -38,4 +38,4 @@ export default {
       media: 'image'
     }
   }
-}
+};
