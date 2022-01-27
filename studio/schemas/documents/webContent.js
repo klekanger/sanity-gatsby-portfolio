@@ -43,7 +43,8 @@ export default {
           { title: 'Kundereferanse', value: 'customer-reference' },
           { title: 'Om meg', value: 'about-me' },
           { title: 'Kontakt meg', value: 'contact-me' },
-          { title: 'Hero-seksjon', value: 'hero' }
+          { title: 'Personvern-side', value: 'privacy' },
+          { title: 'Annet', value: 'other' }
         ],
         layout: 'radio'
       }
