@@ -17,8 +17,6 @@ export default {
       type: 'array',
       of: [
         {
-          name: 'image',
-          title: 'Bilde',
           type: 'figure'
         }
       ]
