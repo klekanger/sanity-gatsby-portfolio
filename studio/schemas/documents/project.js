@@ -63,6 +63,16 @@ export default {
       title: 'Relaterte artikler',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'project' } }]
+    },
+    {
+      name: 'keywords',
+      type: 'array',
+      title: 'Emneknagger',
+      description: 'Emneknagger som beskriver artikkelen',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags'
+      }
     }
   ],
   preview: {
