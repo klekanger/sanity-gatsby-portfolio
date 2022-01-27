@@ -15,11 +15,6 @@ export default {
             title: 'GitHub repo',
             value: 'https://github.com/klekanger/sanity-gatsby-portfolio',
             category: 'Code'
-          },
-          {
-            title: 'Frontend',
-            value: 'https://sanity-gatsby-portfolio-web-fz9f4ju3.netlify.com',
-            category: 'apps'
           }
         ]
       }
