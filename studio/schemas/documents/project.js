@@ -39,8 +39,14 @@ export default {
       type: 'simplePortableText'
     },
     {
-      name: 'members',
+      name: 'author',
       title: 'Forfatter',
+      type: 'reference',
+      to: { type: 'author' }
+    },
+    {
+      name: 'members',
+      title: 'Forfatter (ikke lenger i bruk)',
       type: 'array',
       of: [{ type: 'projectMember' }]
     },

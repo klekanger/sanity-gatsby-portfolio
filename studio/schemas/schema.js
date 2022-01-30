@@ -1,5 +1,6 @@
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 import createSchema from 'part:@sanity/base/schema-creator';
+import author from './documents/author';
 import category from './documents/category';
 import person from './documents/person';
 import project from './documents/project';
@@ -31,7 +32,8 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     category,
-    person,
+    author,
+    person, // Skal fjernes! Erstattet av author
     project,
     webContent,
     webContentTextBox,

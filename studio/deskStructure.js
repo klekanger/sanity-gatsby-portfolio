@@ -6,6 +6,7 @@ const hiddenDocTypes = listItem =>
     'category',
     'webContent',
     'person',
+    'author',
     'project',
     'siteSettings',
     'webFrontpageContent',
@@ -27,8 +28,8 @@ export default () =>
         .icon(MdSettings),
       S.listItem()
         .title('Forfattere')
-        .schemaType('person')
-        .child(S.documentTypeList('person').title('Forfattere')),
+        .schemaType('author')
+        .child(S.documentTypeList('author').title('Forfattere')),
       S.listItem()
         .title('Artikler')
         .schemaType('project')
