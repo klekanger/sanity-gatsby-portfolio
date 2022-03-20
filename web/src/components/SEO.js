@@ -1,14 +1,14 @@
-import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
+import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import favicon32 from '../images/favicon-32.png'
 import favicon128 from '../images/favicon-128.png'
 import favicon152 from '../images/favicon-152.png'
 import favicon167 from '../images/favicon-167.png'
 import favicon180 from '../images/favicon-180.png'
 import favicon192 from '../images/favicon-192.png'
 import favicon196 from '../images/favicon-196.png'
+import favicon32 from '../images/favicon-32.png'
 
 function SEO({ description, lang, meta, keywords, title, image }) {
   return (

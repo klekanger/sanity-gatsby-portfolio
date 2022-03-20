@@ -1,16 +1,16 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-import {
-  mapEdgesToNodes,
-  filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture,
-} from '../lib/helpers'
+import React from 'react'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
-import ProjectPreviewGrid from '../components/project-preview-grid'
-import SEO from '../components/seo'
-import Layout from '../containers/layout'
 import IntroText from '../components/introtext'
+import ProjectPreviewGrid from '../components/project-preview-grid'
+import SEO from '../components/SEO'
+import Layout from '../containers/layout'
+import {
+  filterOutDocsPublishedInTheFuture,
+  filterOutDocsWithoutSlugs,
+  mapEdgesToNodes,
+} from '../lib/helpers'
 
 export const query = graphql`
   query IndexPageQuery {

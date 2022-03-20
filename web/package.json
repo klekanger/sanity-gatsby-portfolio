@@ -6,10 +6,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean-cache": "gatsby clean",
-    "dev": "npm run clean-cache && gatsby develop",
-    "lint": "eslint .",
-    "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "dev": "npm run clean-cache && gatsby develop"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -25,7 +22,7 @@
     "dotenv": "^10.0.0",
     "framer-motion": "^5.2.1",
     "fs": "0.0.1-security",
-    "gatsby": "^4.1.0",
+    "gatsby": "^4.10.1",
     "gatsby-plugin-google-analytics": "^4.1.0",
     "gatsby-plugin-image": "^2.1.0",
     "gatsby-plugin-manifest": "^4.1.0",
@@ -44,6 +41,7 @@
     "react-syntax-highlighter": "^15.4.4"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2"
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0"
   }
 }
