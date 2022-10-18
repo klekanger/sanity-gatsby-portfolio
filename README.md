@@ -1,5 +1,8 @@
 # Personlig portfolio-side for Kurt Lekanger
 
+PS: Dette er min gamle nettside. Eksisterer ikke lenger.
+------
+
 Dette er min personlige nettside, som i hovedsak er viet til diverse prosjekter innenfor programvare- og webutvikling som jeg holder på med på fritiden.
 
 Nettsiden er basert på Gatsby og React, med Sanity.io som headless CMS-løsning for lagring av innholdet.
